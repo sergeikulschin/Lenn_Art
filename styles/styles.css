@@ -22,6 +22,16 @@ body {
     left: 0;
     width: 100%;
     height: 147px;
+    background: rgba(222, 222, 222, 0.98);
+    z-index: 100;
+}
+
+@supports (backdrop-filter: blur(20px);)
+{
+    .page-header{
+        backdrop-filter: blur(20px);
+        background: rgba(222, 222, 222, 0.98);
+    }
 }
 
 .page-header__container {
@@ -164,6 +174,39 @@ body {
     object-fit: cover;
 }
 
-.events-card__title {
+/*.events-card__title {
+}*/
 
+.resrve {
+    display: grid;
+    width: 100%;
+    gap: 67px 150px;
+    grid-template-columns: 405px calc(89%-405px);
+    grid-template-areas:
+     "checkbox scheme"
+     "order legend";
+}
+
+.resrve__checkbox {
+    grid-area: checkbox;
+    border-color: #BC3324;
+    height: 100px;
+}
+
+.resrve__scheme {
+    grid-area: scheme;
+    border-color: aqua;
+    height: 100px;
+}
+
+.resrve__order {
+    grid-area: order;
+    border-color: aquamarine;
+    height: 100px;
+}
+
+.resrve__legend {
+    grid-area: legend;
+    border-color: green;
+    height: 100px;
 }
